@@ -155,8 +155,10 @@ class SiteController extends Controller
                 'pageSize' => 5,
             ],
         ]);
+        
         return $this->render('profile', [
                 'dataProvider' => $dataProvider,
+                'parentReferal' => Yii::$app->user->identity->parentReferal
         ]);
     }
 }
