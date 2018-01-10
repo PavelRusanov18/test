@@ -54,7 +54,7 @@ class SignupForm extends Model
         $user = new User();
         $user->username = $this->username;
         $user->email = $this->email;
-        $user->ref_id = $this->ref_user->id;
+        $user->ref_id = $this->ref_user ? $this->ref_user->id : null;
         $user->setPassword($this->password);
         $user->generateAuthKey();
         return $user->save() ? $user : null;

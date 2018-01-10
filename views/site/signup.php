@@ -17,8 +17,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= $form->field($model, 'email') ?>
                 <?= $form->field($model, 'password')->passwordInput() ?>
             
-                <?= $referal ? $form->field($referal, 'id') : ""; ?>
-            
                 <?= $model->ref_user ? "Вы пришли от: {$model->ref_user->email}" : ""; ?>
             
                 <div class="form-group">
